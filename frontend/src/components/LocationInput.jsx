@@ -58,6 +58,7 @@ const LocationInput = ({
           </AutoComplete>
           <Button
             variant="Blue"
+            fontWeight="300"
             onClick={() => {
               handleSearch();
             }}
@@ -71,7 +72,11 @@ const LocationInput = ({
             </Text>
             <Divider borderColor="black" />
           </Flex>
-          <Button variant="Gray" onClick={() => setIsUsingLocation(true)}>
+          <Button
+            variant="Gray"
+            onClick={() => setIsUsingLocation(true)}
+            fontWeight="300"
+          >
             Use Current Location
           </Button>
         </Flex>
