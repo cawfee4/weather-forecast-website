@@ -87,7 +87,7 @@ const ForeCast = ({ weatherData, day, handleSearch }) => {
       {!isEmptyObject(weatherData) && (
         <>
           <ForeCastBanner weatherData={weatherData} />
-          <Heading as="h1" size="lg" color="weather.gray">
+          <Heading as="h1" size="lg" color="black">
             {day}-Day Forecast
           </Heading>
           <Grid
