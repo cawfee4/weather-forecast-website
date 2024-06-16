@@ -19,5 +19,4 @@ ed Locations:
 ## Demo Video
 The demo video showcases the user-friendly interface and functionality of the weather forecast web application:
 
-![2024-06-16 19-20-17 (1)](https://github.com/cawfee4/weather-forecast-website/assets/94046123/fbe55616-1b0b-4ec6-9665-231d9f66bc08)
-
+![2024-06-16 19-20-17](https://github.com/cawfee4/weather-forecast-website/assets/94046123/cd662047-ee43-4d37-91d2-888c7b990d79)
