@@ -1,4 +1,4 @@
-import { Flex, Text } from "@chakra-ui/react";
+import { Flex, Text, useMediaQuery } from "@chakra-ui/react";
 import LocationInput from "../components/LocationInput";
 import Header from "../components/Header";
 import ForeCast from "../components/ForeCast";
@@ -136,10 +136,20 @@ const PageContainer = () => {
     setWeatherData({});
     setCurrentCity(null);
   };
+
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
   return (
     <Flex flexDir="column">
       <Header />
-      <Flex gap="50px" bg="weather.background" h="100vh" p="30px">
+      <Flex
+        flexDir={isLargerThan768 ? "row" : "column"}
+        gap={isLargerThan768 ? "50px" : "20px"}
+        bg="weather.background"
+        minH="100vh"
+        w="100%"
+        p="30px"
+      >
         <Flex flexDir="column" gap="20px">
           <LocationInput
             handleInputChange={handleInputChange}

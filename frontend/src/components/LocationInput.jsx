@@ -55,7 +55,12 @@ const LocationInput = ({
               ))}
             </AutoCompleteList>
           </AutoComplete>
-          <Button variant="Blue" onClick={() => handleSearch()}>
+          <Button
+            variant="Blue"
+            onClick={() => {
+              handleSearch();
+            }}
+          >
             Search
           </Button>
           <Divider bgColor="black" w="100%" h="1px" />

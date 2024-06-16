@@ -138,7 +138,12 @@ router.post("/subscribeDaily", async (req, res) => {
     if (existingSubscription) {
       // Delete the existing subscription
       await RegisteredEmail.deleteOne({ address });
-      return res.status(200).json({ message: "Unsubscribed successfully" });
+      res.status(200).json({
+        message: "Unsubscribed successfully",
+        address: address,
+        status: "unsubscribed",
+      });
+      return;
     }
 
     // If not, create a new subscription
@@ -153,10 +158,18 @@ router.post("/subscribeDaily", async (req, res) => {
       html: HTML_TEMPLATE(address),
     };
     SENDMAIL(mailDetails, () => {
-      res.status(201).json({ message: "Subscribe successful" });
+      res.status(201).json({
+        message: "Subscribe successful",
+        address: address,
+        location: location,
+        status: "subscribed",
+      });
     });
   } catch (err) {
-    res.status(400).json({ message: err.message });
+    res.status(400).json({
+      message: err.message,
+      status: "error",
+    });
   }
 });
 
