@@ -127,7 +127,7 @@ const ForeCast = ({ weatherData, day, handleSearch }) => {
       )}
       <form onSubmit={formik.handleSubmit}>
         <FormControl isInvalid={formik.touched.email && formik.errors.email}>
-          <FormLabel fontSize="1rem" color="weather.gray" fontWeight="700">
+          <FormLabel fontSize="1rem" color="black" fontWeight="700">
             Register to get daily weather forecasts
           </FormLabel>
           <Input
