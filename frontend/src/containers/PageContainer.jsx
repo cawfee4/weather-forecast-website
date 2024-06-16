@@ -140,15 +140,12 @@ const PageContainer = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
 
   return (
-    <Flex flexDir="column">
+    <Flex flexDir="column" bg="weather.background" minH="100vh" w="full">
       <Header />
       <Flex
+        p="20px"
         flexDir={isLargerThan768 ? "row" : "column"}
         gap={isLargerThan768 ? "50px" : "20px"}
-        bg="weather.background"
-        minH="100vh"
-        w="100%"
-        p="30px"
       >
         <Flex flexDir="column" gap="20px">
           <LocationInput

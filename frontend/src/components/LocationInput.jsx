@@ -4,6 +4,7 @@ import {
   FormControl,
   FormLabel,
   Divider,
+  Text,
 } from "@chakra-ui/react";
 import {
   AutoComplete,
@@ -63,7 +64,13 @@ const LocationInput = ({
           >
             Search
           </Button>
-          <Divider bgColor="black" w="100%" h="1px" />
+          <Flex align="center">
+            <Divider borderColor="black" />
+            <Text px="2" fontSize="0.875rem" color="gray.600">
+              Or
+            </Text>
+            <Divider borderColor="black" />
+          </Flex>
           <Button variant="Gray" onClick={() => setIsUsingLocation(true)}>
             Use Current Location
           </Button>
